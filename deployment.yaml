@@ -1,4 +1,4 @@
-# kubectl create secret docker-registry ghcr-auth-secret --docker-server=ghcr.io --docker-username=bognarpal --docker-password=<TOKEN>
+# kubectl create secret docker-registry ghcr-auth-secret --docker-server=ghcr.io --docker-username=fazekasbotond3 --docker-password=<TOKEN>
 
 apiVersion: apps/v1
 kind: Deployment
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: cicd-13c-container
-          image: ghcr.io/bognarpal/k8s-cicd-13c:1773646931
+          image: ghcr.io/fazekasbotond3/k8s-cicd-13c:1773646931
           ports:
             - containerPort: 80
       imagePullSecrets:
@@ -52,7 +52,7 @@ spec:
   ingressClassName: nginx 
 
   rules:
-    - host: cicd13c-bognarpal.jcloud.jedlik.cloud
+    - host: cicd13c-fazekasbotond3.jcloud.jedlik.cloud
       http:
         paths:
           - path: /
